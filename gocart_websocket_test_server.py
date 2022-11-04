@@ -10,6 +10,6 @@ async def accept(websocket):
             data = 0
 
 
-start_server = websockets.serve(accept, "localhost", 7712)
+start_server = websockets.serve(accept, "0.0.0.0", 7712)
 asyncio.get_event_loop().run_until_complete(start_server)
 asyncio.get_event_loop().run_forever()

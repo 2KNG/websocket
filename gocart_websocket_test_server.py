@@ -7,6 +7,7 @@ async def accept(websocket):
         data = await websocket.recv()
         if data:
             await websocket.send(data)
+            print(data)
             data = 0
 
 

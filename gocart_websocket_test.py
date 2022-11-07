@@ -8,7 +8,7 @@ robot_message = 0
 def ws_thread():
     async def connect():
         # 웹 소켓에 접속을 합니다.
-        async with websockets.connect("ws://etom.run:7712") as websocket:
+        async with websockets.connect("ws://etom.run:7712", ping_interval=None) as websocket:
             await websocket.send("mac connected")
             while True:
                 data = await websocket.recv()
